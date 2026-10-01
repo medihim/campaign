@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IPPEO 랜딩페이지 수정안 LP v1.1</title>
+<style>
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+*{box-sizing:border-box}
+body{margin:0;background:#f5f7f9;color:#1f2937;font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif}
+.page{max-width:1240px;margin:0 auto;padding:32px 22px 80px}
+.header{background:linear-gradient(120deg,rgba(22,162,181,.12),#fff 48%,rgba(255,102,204,.12));border:1px solid #dfe7ea;border-radius:20px;padding:26px;margin-bottom:20px}
+.header .k{font-size:11px;font-weight:900;color:#0F7F8F;letter-spacing:.08em}
+.header h1{font-size:30px;margin:6px 0 8px}
+.header p{margin:0;color:#4b5563;line-height:1.65}
+.section{background:#fff}
+.callout{padding:14px 16px;border-radius:10px;background:#EAF8FA;border-left:4px solid #16A2B5}
+.table-wrap{overflow:auto;border:1px solid #e5e7eb;border-radius:10px}
+table{width:100%;border-collapse:collapse;min-width:700px}
+th,td{padding:11px 12px;border-bottom:1px solid #e5e7eb;text-align:left;font-size:12px;vertical-align:top}
+th{background:#f8fafc}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="k">TASK 02 · LANDING REVISION</div>
+    <h1>IPPEO 10/10 온라인 상담회 랜딩 수정안</h1>
+    <p>Baseline LP v1.0의 분석·진단 결과를 토대로 수정할 항목과 버전 이력을 관리합니다.</p>
+  </div>
+  <!-- IPPEO Landing Update Gate Component v1.0 / 2026-10-01 -->
+<style>
+#landing-update-gate{font-family:"Pretendard","Noto Sans KR",sans-serif;color:#1f2937;line-height:1.65;background:#fff;border:1px solid #e5e7eb;border-radius:18px;padding:30px;max-width:1200px;margin:24px auto}
+
+/* Landing Update Gate v1.0 */
+.update-gate{--ug-pink:#FF66CC;--ug-teal:#16A2B5;--ug-line:#e5e7eb}
+.update-gate .ug-head{padding:22px;border-radius:18px;background:linear-gradient(120deg,rgba(22,162,181,.10),rgba(255,102,204,.10));border:1px solid #dfe7ea;margin:14px 0 18px}
+.update-gate .ug-kicker{font-size:11px;font-weight:900;letter-spacing:.08em;color:var(--ug-teal)}
+.update-gate .ug-meta{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}
+.update-gate .ug-pill{font-size:11px;font-weight:700;border:1px solid #dbe3e7;background:#fff;border-radius:999px;padding:5px 9px}
+.update-gate .ug-versions,.update-gate .ug-topics{display:grid;gap:10px;margin:12px 0 18px}
+.update-gate .ug-versions{grid-template-columns:repeat(4,minmax(0,1fr))}
+.update-gate .ug-topics{grid-template-columns:repeat(3,minmax(0,1fr))}
+.update-gate .ug-card{border:1px solid var(--ug-line);border-radius:14px;background:#fff;padding:13px}
+.update-gate .ug-card b{display:block;font-size:13px;margin-bottom:4px}.update-gate .ug-card span{font-size:11px;color:#64748b}
+.update-gate .ug-status{display:inline-flex;margin-top:7px;font-size:10px;font-weight:900;padding:3px 7px;border-radius:999px}
+.update-gate .keep{background:#ecfdf3;color:#047857}.update-gate .modify{background:#fff7ed;color:#b45309}.update-gate .verify{background:#eff6ff;color:#1d4ed8}.update-gate .add{background:#fff0fa;color:#c0268f}
+.update-gate details{border:1px solid var(--ug-line);border-radius:14px;background:#fff;margin:9px 0;overflow:hidden}
+.update-gate summary{cursor:pointer;list-style:none;padding:14px 15px;display:flex;justify-content:space-between;gap:10px}.update-gate summary::-webkit-details-marker{display:none}
+.update-gate .ug-code{font-size:10px;font-weight:900;color:#fff;background:var(--ug-teal);padding:4px 7px;border-radius:7px;margin-right:8px}.update-gate .ug-sumtitle{font-size:14px;font-weight:800}.update-gate .ug-ver{font-size:11px;color:#64748b;white-space:nowrap}
+.update-gate .ug-body{padding:0 15px 16px;border-top:1px solid #edf0f2}
+.update-gate .ug-triad{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:13px 0}.update-gate .ug-triad>div{padding:12px;border:1px solid #edf0f2;border-radius:11px;background:#fafbfc}.update-gate .ug-triad b{font-size:12px}.update-gate .ug-triad p{font-size:12px;color:#4b5563;margin:5px 0 0}
+.update-gate .ug-example{margin:10px 0;padding:12px 13px;border-left:4px solid var(--ug-pink);background:#f8fafc;border-radius:9px;font-size:13px}
+.update-gate .ug-release{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.update-gate .ug-release>div{padding:12px;border:1px solid var(--ug-line);border-radius:12px;background:#fff;font-size:12px}.update-gate .ug-release b{display:block;margin-bottom:3px}
+.update-gate .ug-template{margin-top:13px;padding:15px;border:1px dashed #9db2b9;border-radius:13px;background:#fbfdfe;font-size:12px}
+@media(max-width:1000px){.update-gate .ug-versions,.update-gate .ug-topics,.update-gate .ug-triad,.update-gate .ug-release{grid-template-columns:1fr}}
+
+</style>
+
+<section class="section landing update-gate" id="landing-update-gate">
+  <h2>UPDATE GATE · 랜딩 수정안</h2>
+  <p class="lead">현재 목업의 큰 구조는 유지한다. 다만 광고 릴리즈 전에는 <strong>랜딩이 약속하는 내용과 실제 상담 운영이 일치하도록</strong> 토픽별 수정·확인·추가 작업을 완료한다.</p>
+
+  <div class="ug-head">
+    <div class="ug-kicker">IPPEO LANDING REVIEW GATE</div>
+    <h3 style="margin:5px 0 7px">10/10 온라인 상담회 랜딩 · 수정 버전 관리</h3>
+    <p style="margin:0;font-size:13px;color:#4b5563">기준 목업을 폐기하지 않고 분석·진단 결과를 토픽 단위로 보정한다. 새 주제가 생길 때마다 토픽 카드와 Version Log를 추가한다.</p>
+    <div class="ug-meta"><span class="ug-pill">기준 LP v1.0</span><span class="ug-pill">현재 제안 LP v1.1</span><span class="ug-pill">Release Candidate v1.2</span><span class="ug-pill">Tracking v1.3</span><span class="ug-pill">2026-10-01</span></div>
+  </div>
+
+  <h3 id="ug-version">A. 버전 체계</h3>
+  <div class="ug-versions">
+    <div class="ug-card"><b>LP v1.0 · Baseline</b><span>현재 KO/JA 목업. 구조·카피·CTA 기준본.</span></div>
+    <div class="ug-card"><b>LP v1.1 · Revision</b><span>이번 분석·진단을 반영한 콘텐츠·UX 보정안.</span></div>
+    <div class="ug-card"><b>LP v1.2 · Release Candidate</b><span>의료진·LINE·SOP·법정정보 실제값 검증 후.</span></div>
+    <div class="ug-card"><b>LP v1.3 · Tracking Enabled</b><span>GTM/GA4 이벤트와 파라미터 적용 후.</span></div>
+  </div>
+
+  <h3 id="ug-topics">B. 토픽별 수정안</h3>
+  <div class="ug-topics">
+    <div class="ug-card"><b>T01 · Hero</b><span>대상 고객과 첫 메시지</span><i class="ug-status keep">KEEP + MINOR</i></div>
+    <div class="ug-card"><b>T02 · WHY</b><span>4~8주 수치 검증</span><i class="ug-status modify">MODIFY</i></div>
+    <div class="ug-card"><b>T03 · Report</b><span>비교 리포트 제공 범위</span><i class="ug-status modify">MODIFY</i></div>
+    <div class="ug-card"><b>T04 · Doctors</b><span>종합상담회 vs 단일병원 구분</span><i class="ug-status verify">DEFINE</i></div>
+    <div class="ug-card"><b>T05 · Flow</b><span>숨겨진 앱 단계 제거</span><i class="ug-status modify">MODIFY</i></div>
+    <div class="ug-card"><b>T06 · FAQ</b><span>사전상담 범위 명확화</span><i class="ug-status add">ADD</i></div>
+    <div class="ug-card"><b>T07 · Promise</b><span>무료·통역·리포트 ↔ SOP 대조</span><i class="ug-status verify">VERIFY</i></div>
+    <div class="ug-card"><b>T08 · Trust</b><span>로고·의료진·Footer 실정보</span><i class="ug-status verify">VERIFY</i></div>
+    <div class="ug-card"><b>T09 · Tracking</b><span>태깅 전. v1.3에서 적용</span><i class="ug-status add">NEXT</i></div>
+  </div>
+
+  <details open><summary><span><span class="ug-code">T01</span><span class="ug-sumtitle">Hero · 대상 고객과 첫 메시지</span></span><span class="ug-ver">Topic v1.1 · KEEP + MINOR</span></summary><div class="ug-body">
+    <div class="ug-triad"><div><b>분석</b><p>고민 → 의사 직접상담 → 일정/무료 → LINE CTA의 흐름은 강점.</p></div><div><b>진단</b><p>“한국 미용의료 검토 중”은 범위가 넓어 저의향 고객까지 포함 가능.</p></div><div><b>수정</b><p>구조는 유지하고 이미 정보를 봤지만 아직 결정 못한 고객을 명확히 지정.</p></div></div>
+    <div class="ug-example"><b>JA 예시</b><br>韓国の美容医療を調べているけれど、まだ決めきれない方へ。</div>
+  </div></details>
+
+  <details><summary><span><span class="ug-code">T02</span><span class="ug-sumtitle">WHY · 상담이 필요한 이유</span></span><span class="ug-ver">Topic v1.1 · MODIFY</span></summary><div class="ug-body">
+    <div class="ug-triad"><div><b>분석</b><p>“후기로 알 수 있는 것은 그 사람의 경우까지”는 유지 가치가 큼.</p></div><div><b>진단</b><p>“보통 4~8주”는 실측 근거가 없으면 가짜 정밀도가 됨.</p></div><div><b>수정</b><p>근거가 있으면 유지, 없으면 조기상담의 효용으로 정성화.</p></div></div>
+    <div class="ug-example"><b>JA 예시</b><br>渡韓の予定がある方は、余裕をもって早めに相談しておくと安心です。</div>
+  </div></details>
+
+  <details><summary><span><span class="ug-code">T03</span><span class="ug-sumtitle">WHAT · 상담 결과물과 리포트</span></span><span class="ug-ver">Topic v1.1 · MODIFY</span></summary><div class="ug-body">
+    <div class="ug-triad"><div><b>분석</b><p>상담 후 리포트는 현재 랜딩의 가장 강한 Value 중 하나.</p></div><div><b>진단</b><p>“比較レポート”와 A/B clinic 비교는 복수병원 비교를 보장하는 서비스로 이해될 수 있음.</p></div><div><b>수정</b><p>복수 비교를 보장하지 않으면 “オンライン相談レポート” 또는 “相談内容まとめ”로 변경.</p></div></div>
+    <div class="ug-example"><b>JA 예시</b><br>この相談で、確認できること<br>・考えられる施術の方向性<br>・費用の目安<br>・ダウンタイム・渡韓時に確認すること<br>※実際のレポート内容は相談内容によって異なります。</div>
+  </div></details>
+
+  <details><summary><span><span class="ug-code">T04</span><span class="ug-sumtitle">DOCTORS · 캠페인 성격과 의료진</span></span><span class="ug-ver">Topic v1.1 · DEFINE / VERIFY</span></summary><div class="ug-body">
+    <div class="ug-triad"><div><b>분석</b><p>현재 여러 분야 의료진이 함께 노출됨.</p></div><div><b>진단</b><p>10/10 종합상담회로는 성립하지만 이후 단일병원 POC의 공용 LP로는 선택지가 다시 많아짐.</p></div><div><b>수정</b><p>10/10은 종합상담회로 명시하고 이후 캠페인은 병원/고민별 Single LP로 분리.</p></div></div>
+    <div class="ug-example"><b>표기 예시</b><br>複数分野の韓国医師に相談できる、IPPEO総合オンライン相談会</div>
+  </div></details>
+
+  <details><summary><span><span class="ug-code">T05</span><span class="ug-sumtitle">HOW · LINE → 앱 → 상담</span></span><span class="ug-ver">Topic v1.1 · MODIFY</span></summary><div class="ug-body">
+    <div class="ug-triad"><div><b>분석</b><p>LINE 진입 후 일정 확정, 앱 준비, 당일 상담의 실제 운영 단계가 존재.</p></div><div><b>진단</b><p>앱 준비가 Hero에서 보이지 않아 숨겨진 단계로 체감될 수 있고 “24시간 내 일시 제안”은 10/10 고정 행사와 충돌 가능.</p></div><div><b>수정</b><p>앱을 처음부터 공개하고 10/10 상담 가능 시간 안내로 통일.</p></div></div>
+    <div class="ug-example"><b>JA 예시</b><br>01 LINEで相談したい内容を送る<br>02 10月10日の相談可能時間をご案内<br>03 時間確定後、IPPEOアプリの利用方法をご案内<br>04 当日、医師とオンライン相談</div>
+  </div></details>
+
+  <details><summary><span><span class="ug-code">T06</span><span class="ug-sumtitle">FAQ · 온라인 상담 범위와 개인정보</span></span><span class="ug-ver">Topic v1.1 · ADD / MODIFY</span></summary><div class="ug-body">
+    <div class="ug-triad"><div><b>분석</b><p>언어·예약·비용·일정 불안을 이미 잘 다룸.</p></div><div><b>진단</b><p>온라인 상담이 최종 시술/가격 확정으로 오해될 수 있으며, 1:1 상담이라면 “다른 참가자에게 이름이 보이나” 문구가 새 불안을 만들 수 있음.</p></div><div><b>수정</b><p>사전상담 범위를 명확히 하고 실제 운영이 1:1이면 FAQ를 개인상담 여부 중심으로 전환.</p></div></div>
+    <div class="ug-example"><b>추가 FAQ 예시</b><br>Q. オンライン相談だけで、施術内容や料金は決まりますか？<br>オンライン相談では、考えられる方向性や費用の目安をご案内します。最終的な内容は、ご来院後の確認によって変わる場合があります。</div>
+  </div></details>
+
+  <details><summary><span><span class="ug-code">T07</span><span class="ug-sumtitle">PROMISE · 랜딩 약속과 운영 SOP</span></span><span class="ug-ver">Topic v1.2 · VERIFY</span></summary><div class="ug-body">
+    <div class="ug-triad"><div><b>분석</b><p>무료·통역·리포트·권유 없음은 강한 안심 요소.</p></div><div><b>진단</b><p>실제 운영과 다르면 가장 큰 신뢰 훼손 요소가 됨.</p></div><div><b>수정</b><p>문구마다 담당자·가능여부·예외조건을 확인하고 확인된 약속만 v1.2에 반영.</p></div></div>
+  </div></details>
+
+  <details><summary><span><span class="ug-code">T08</span><span class="ug-sumtitle">TRUST · 로고·의료진·Footer</span></span><span class="ug-ver">Topic v1.2 · VERIFY</span></summary><div class="ug-body">
+    <div class="ug-triad"><div><b>분석</b><p>제휴/지원 로고와 회사정보는 높은 신뢰 신호.</p></div><div><b>진단</b><p>관계 설명 없는 로고는 주최·후원·기술협력을 혼동시킬 수 있고, 의료진/법인정보는 실정보와 일치해야 함.</p></div><div><b>수정</b><p>로고 관계 설명 추가, 공식 일본어명·직책·분야·사진·법인정보 전수 확인.</p></div></div>
+  </div></details>
+
+  <details><summary><span><span class="ug-code">T09</span><span class="ug-sumtitle">TRACKING · 이벤트 태깅</span></span><span class="ug-ver">Topic v1.3 · NEXT</span></summary><div class="ug-body">
+    <div class="ug-triad"><div><b>분석</b><p>현재는 태깅 전이므로 이벤트 부재 자체는 이슈가 아님.</p></div><div><b>진단</b><p>모든 섹션을 동일하게 태깅하기보다 고객 상태가 바뀌는 지점을 측정하는 편이 해석력이 높음.</p></div><div><b>수정</b><p>v1.3에서 최소 이벤트와 CTA 위치 파라미터를 적용.</p></div></div>
+    <div class="ug-example"><b>최소 이벤트</b><br>lp_view → value_view → trust_view → cta_click → line_open / form_click → lead_captured → lead_qualified → consult_booked → consult_attended<br><b>CTA</b> cta_position = hero / sticky / final</div>
+  </div></details>
+
+  <h3 id="ug-release">C. LP v1.2 Release Gate · 광고 릴리즈 전 확인</h3>
+  <div class="ug-release">
+    <div><b>10/10 상담회 성격</b>종합상담회인지 단일병원형인지 동일하게 정의.</div>
+    <div><b>리포트 제공 범위</b>비교형인지 단일 상담요약인지 실제 운영과 일치.</div>
+    <div><b>앱 사용 필수 여부</b>필수라면 HOW에 처음부터 공개.</div>
+    <div><b>LINE URL</b>Hero / Sticky / Final CTA 실링크 연결.</div>
+    <div><b>의료진 실제정보</b>공식 일본어명·직책·분야·참석·사진 확인.</div>
+    <div><b>숫자·SLA</b>4~8주, 24시간 안내 등 근거 확인.</div>
+    <div><b>랜딩 약속 ↔ SOP</b>무료·통역·리포트·취소·개인정보·복수상담 대조.</div>
+    <div><b>Footer·제휴로고</b>법인정보·파트너 관계 실제값 확인.</div>
+  </div>
+
+  <h3 id="ug-rule">D. 다른 토픽 추가 시 버저닝 규칙</h3>
+  <div class="callout teal"><strong>문서 버전과 토픽 버전을 분리한다.</strong><br>전체 정보 구조가 바뀌면 Framework 버전을 올리고, 특정 주제만 바뀌면 해당 Topic 버전만 올린다.</div>
+  <div class="table-wrap"><table><thead><tr><th>항목</th><th>규칙</th><th>예시</th></tr></thead><tbody>
+    <tr><td>Framework 버전</td><td>대분류·레이아웃·전체 구조 변경</td><td>v2.5 → v2.6</td></tr>
+    <tr><td>Landing 버전</td><td>실제 랜딩 릴리즈 단위</td><td>LP v1.0 → v1.1 → v1.2</td></tr>
+    <tr><td>Topic 버전</td><td>특정 토픽만 변경</td><td>T05 v1.1 → v1.2</td></tr>
+    <tr><td>Status</td><td>KEEP / MODIFY / ADD / VERIFY / RELEASED / MEASURED</td><td>T03 v1.2 RELEASED</td></tr>
+  </tbody></table></div>
+  <div class="ug-template"><b>신규 토픽 템플릿</b><br>TXX · 토픽명 / Topic v1.0 / Status<br>① 분석 ② 진단 ③ 수정 ④ 예시 ⑤ 릴리즈 조건 ⑥ Version Log</div>
+</section>
+
+
+</div>
+</body>
+</html>
